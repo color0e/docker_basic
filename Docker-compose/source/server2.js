@@ -13,9 +13,7 @@ var connection=mysql.createConnection({
 });
 
 app.get('/', function (req, res) {
-res.send("hello docker");
 connection.query('select * from test', function(err, rows, fields){
-    if (err) callback(err, null);
     res.send(rows[0].printtext);
   });
 });
