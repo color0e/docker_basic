@@ -14,7 +14,7 @@ var connection=mysql.createConnection({
 
 app.get('/', function (req, res) {
 connection.query('select * from test', function(err, rows, fields){
-    res.send(rows[0].printtext);
+    res.send(rows);
   });
 });
 
