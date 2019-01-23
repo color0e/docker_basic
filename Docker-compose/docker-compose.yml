@@ -27,7 +27,7 @@ services:
   depends_on:
    - db
   working_dir: /usr/app
-  command: node server.js
+  command: node server2.js
   
  nginx:
   container_name: nginx
